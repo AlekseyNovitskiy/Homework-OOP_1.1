@@ -1,5 +1,10 @@
+import transport.Car;
+
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
+        /*
         // Задание 1.
         System.out.println("Задание 1");
 
@@ -49,6 +54,8 @@ public class Main {
         hyundai.conclusion();
 
 
+
+
         // Задание 2.
         System.out.println("Задание 2");
 
@@ -68,20 +75,33 @@ public class Main {
         System.out.println(kia2);
         System.out.println(hyundai2);
 
+         */
+
 
         //Задание 3
         System.out.println("Задание 3");
 
+
+        Car.Key ghost = new Car.Key(true,false);
+        LocalDate oldDate = LocalDate.of(2021, 12, 31);
+        Car.Insurance delayDate = new Car.Insurance(oldDate, 5057.6F, "KG000689H");
+        LocalDate normalDate = LocalDate.of(2023, 12, 31);
+        Car.Insurance futureDate = new Car.Insurance(normalDate, 5678.6F, "LO5649589J");
         Car lada3 = new Car(null, "Granta", "России", "желтый",
-                1.7, 2015);
+                1.7, 2015,"Механика","седан",
+                "р524кр799",5,true, ghost, delayDate);
         Car audi3 = new Car("Audi", null, "Германии",
-                "черный ", 3.0, 2020);
+                "черный ", 3.0, 2020,"Автомат","седан",
+                "х873нн799",0,true, ghost, futureDate);
         Car bmw3 = new Car("BMW", "Z8", null, "черный",
-                3.0, 2021);
+                3.0, 2021,null,null,
+                "552455799",4,false, ghost, futureDate);
         Car kia3 = new Car("Kia","Sportage 4-го поколения","Южной Корее",
-                null,2.0, 0);
+                null,2.0, 0,null,"внедорожник",
+                "р645кр79",5,false, ghost, delayDate);
         Car hyundai3 = new Car("Hyundai", "Avante", "Южной Корее",
-                "оранжевый", 0, 2016);
+                "оранжевый", 0, 2016,"Механика","седан",
+                null,5,true, ghost, delayDate);
 
         System.out.println(lada3);
         System.out.println(audi3);
